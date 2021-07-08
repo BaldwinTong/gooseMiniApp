@@ -1,0 +1,58 @@
+<view class="head">
+  <view class="swiper">
+    <swiper indicator-dots autoplay circular>
+      <block wx:for="{{imageList}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" mode="widthFix"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
+
+<view class="tab">
+  <view class="iconList">
+    <view class="item" bindtap="todayPrice">
+      <image src="../../images/今日价格.png"></image>
+      <view class="iconTitle">今日价格</view>
+    </view>
+    <view class="item" bindtap="toHistoryPrice">
+      <image src="../../images/历史价格.png"></image>
+      <view class="iconTitle">历史价格</view>
+    </view>
+    <view class="item" bindtap="toBusinssStyle">
+      <image src="../../images/企业风采.png"></image>
+      <view class="iconTitle">企业风采</view>
+    </view>
+    <view class="item" bindtap="toPayMoney">
+      <image src="../../images/租金缴费.png"></image>
+      <view class="iconTitle">租金缴纳</view>
+    </view>
+  </view>
+</view>
+<view class="blank_line"></view>
+<view class="news">
+  <view class="allLine">
+    <view class="topTitle">
+      <image src="../../images/动态咨询.png" mode="aspectFit"></image>
+      <view class="text">动态资讯</view>
+    </view>
+  </view>
+
+  <view class="newsList">
+    <block wx:for="{{newsList}}" wx:key="index">
+      <view class="news_item">
+        <view class="item_left">
+          <view class="news_title">{{item.title}}</view>
+          <view class="news_data">
+            <view class="date">{{item.date}}</view>
+            <view class="watch_num">浏览：{{item.watchNum}}人</view>
+          </view>
+        </view>
+        <view class="item_right">
+          <image src="{{item.imageUrl}}" mode="aspectFit"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

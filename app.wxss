@@ -1,0 +1,24 @@
+
+page,view,text,swiper,swiper-item,image,navigator{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page{
+  /* font-family: SimHei, 'Helvetica Neue', Arial, 'Droid Sans', sans-serif; */
+  font-size: 28rpx;
+  width: 100%;
+  color: #333;
+  /* 主题颜色 */
+  --themeColor:#f43256
+}
+
+input {
+  border: none;
+  outline: none;
+}
+image{
+  width: 100%;
+}
+

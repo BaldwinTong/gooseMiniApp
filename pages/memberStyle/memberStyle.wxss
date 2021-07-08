@@ -1,1 +1,21 @@
 /* pages/memberStyle/memberStyle.wxss */
+.page{
+  width: 100%;
+}
+
+.article{
+  width: 100%;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+}
+
+.article .content{
+  color: #696969;
+  font-size: 28rpx;
+  letter-spacing:4rpx;
+}
+
+.article image{
+  width: 100%;
+  margin: 20rpx 0;
+}

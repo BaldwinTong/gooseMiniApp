@@ -1,1 +1,93 @@
 /* pages/todayPrice/todayPrice.wxss */
+.box{
+  width: 100%;
+  background-color: #fff;
+}
+
+.top{
+  width: 100%;
+  background-color: #1E90FF;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+}
+
+.top .search{
+  width: 686rpx;
+  height: 70rpx;
+  border-radius: 18rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.top .search image{
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 50%;
+  left: 35rpx;
+  transform: translateY(-50%);
+}
+
+.top .search .inpt{
+  width: 90%;
+  height: 100%;
+  margin-left: 80rpx;
+}
+
+.tab {
+  width: 100%;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.tab .tab_item{
+  width: 686rpx;
+  height: 60rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#808080;
+  font-size: 24rpx;
+}
+.tab_title, .content .text{
+  width: 112rpx;
+  text-align: center;
+}
+.content{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+
+.content .cont_list{
+  width: 686rpx;
+  height: 80rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.content .cont_list image{
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 6rpx;
+}
+
+.range{
+  font-size: 24rpx;
+  font-weight: normal;
+  color: red;
+}
+
+.color_active{
+  color: green;
+  font-size: 24rpx;
+  font-weight: normal;
+}
+
+
+

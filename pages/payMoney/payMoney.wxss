@@ -1,1 +1,214 @@
 /* pages/payMoney/payMoney.wxss */
+.page{
+  width: 100%;
+}
+
+.top {
+  width: 100%;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top .top_left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.top .top_left .info{
+  margin-left: 12rpx;
+}
+
+.top .top_left .info .username{
+  font-size: 36rpx;
+  color: #000000;
+  margin-bottom: 6rpx;
+}
+
+.top .top_left .info .phoneNum{
+  font-size: 24rpx;
+  color: #696969;
+}
+
+.top .head image{
+  width: 144rpx;
+  height: 144rpx;
+}
+
+.top .top_right{
+  width: 52rpx;
+  height: 52rpx;
+  margin-right: 10rpx;
+}
+
+.cardBox{
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+
+.cardInfo{
+  width: 100%;
+  height: 330rpx;
+  border-radius: 20rpx;
+  padding: 32rpx 60rpx;
+  box-sizing: border-box;
+  background-color: rgba(67,126,241,0.9);
+}
+
+.cardInfo .title{
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 44rpx;
+}
+
+.cardInfo .total{
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.cardInfo .total .totalMoney{
+  font-size: 54rpx;
+  letter-spacing: 2rpx;
+  font-weight: 600;
+}
+.cardInfo .total image{
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.payDetail{
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60rpx;
+}
+
+.payDetail .price{
+  color: #fff;
+  line-height: 44rpx;
+}
+
+.tab{
+  width: 100%;
+  margin-top: 80rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.tab .tabBox{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 60rpx;
+  box-sizing: border-box;
+}
+
+.bottom_line{
+  width: 40rpx;
+  height: 6rpx;
+  background-color: rgb(24,182,124);
+}
+.tab .tabBox .tab_title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab_active{
+  height: 60rpx;
+  line-height: 70rpx;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+
+.data{
+  width: 100%;
+  min-height: 50rpx;
+  background-color: rgb(241,242,245);
+  padding: 32rpx 60rpx;
+  box-sizing: border-box;
+}
+
+.data .list{
+  width: 90%;
+  background-color: #fff;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+  border-radius: 16rpx;
+  position: relative;
+  margin-bottom: 60rpx;
+}
+
+.list .item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list .item .img{
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.item .item_right{
+  width: 80% ;
+  
+  margin-left: 26rpx;
+}
+
+.item .item_right .dataInfo{
+  width: 100%;
+}
+.item .item_right .date_title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item .item_right .date_title .rentDate{
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 44rpx;
+  letter-spacing: 2rpx;
+}
+.item .item_right .date_title .rent{
+  color: rgb(255,121,3);
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 44rpx;
+}
+
+.item .item_right .identNum,.item .item_right .endDate{
+  font-size: 24rpx;
+  color: #696969;
+  line-height: 44rpx;
+}
+
+.list .payBtn{
+  width: 160rpx;
+  height: 60rpx;
+  background-color: rgb(28,180,110);
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  border-radius: 60rpx;
+  position: absolute;
+  bottom: 32rpx;
+  left: 100%;
+  transform: translateX(-50%);
+}
+
+
+

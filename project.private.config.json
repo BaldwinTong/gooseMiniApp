@@ -1,0 +1,42 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "今日价格",
+          "pathName": "pages/todayPrice/todayPrice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "历史价格",
+          "pathName": "pages/historyPrice/historyPrice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "企业风采",
+          "pathName": "pages/memberStyle/memberStyle",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "租金缴纳",
+          "pathName": "pages/payMoney/payMoney",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

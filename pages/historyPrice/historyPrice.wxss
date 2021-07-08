@@ -1,1 +1,121 @@
-/* pages/historyPrice/historyPrice.wxss */
+
+.box{
+  width: 100%;
+  background-color: #fff;
+}
+
+.top{
+  width: 100%;
+  height: 130rpx;
+  background-color: rgb(62,159,254);
+  padding: 10rpx 32rpx;
+  box-sizing: border-box;
+
+}
+
+.top .dateList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top .dateList .top_item{
+  width: 80rpx;
+  height: 110rpx;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.top .top_item_active{
+  width: 80rpx;
+  height: 110rpx;
+  background-color: #fff;
+  color: #000 !important;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12rpx;
+}
+
+.dateList .calendar{
+  width: 100rpx;
+  height: 110rpx;
+  color: #fff;
+  font-size: 22rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateList .calendar image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-bottom: 12rpx;
+}
+
+
+
+.tab {
+  width: 100%;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.tab .tab_item{
+  width: 686rpx;
+  height: 60rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#808080;
+  font-size: 24rpx;
+}
+.tab_title, .content .text{
+  width: 112rpx;
+  text-align: center;
+}
+.content{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+
+.content .cont_list{
+  width: 686rpx;
+  height: 80rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.content .cont_list image{
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 6rpx;
+}
+
+.range{
+  font-size: 24rpx;
+  font-weight: normal;
+  color: red;
+}
+
+.color_active{
+  color: green;
+  font-size: 24rpx;
+  font-weight: normal;
+}
+
+
+

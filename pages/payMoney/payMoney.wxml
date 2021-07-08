@@ -1,2 +1,81 @@
-<!--pages/payMoney/payMoney.wxml-->
-<text>pages/payMoney/payMoney.wxml</text>
+<view class="page">
+  <view class="top">
+    <view class="top_left">
+      <view class="head">
+        <image src="../../images/cddc.png" mode="widthFix"></image>
+      </view>
+      <view class="info">
+        <view class="username">用户名</view>
+        <view class="phoneNum">13666666666</view>
+      </view>
+    </view>
+    <view class="top_right">
+      <image src="../../images/setting.png" mode="widthFix"></image>
+    </view>
+  </view>
+
+  <view class="cardBox">
+    <view class="cardInfo">
+      <view class="title">总资产（元）</view>
+      <view class="total">
+        <view class="totalMoney">159000.00</view>
+        <image src="../../images/cansee.png" mode="widthFix"></image>
+      </view>
+      <view class="payDetail">
+        <view class="payOut">
+          <view class="title">本月支出（元）</view>
+          <view class="price">-1000</view>
+        </view>
+        <view class="getIn">
+          <view class="title">本月收益（元）</view>
+          <view class="price">500</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="tab">
+    <view class="tabBox">
+      <block wx:if="{{tab == 1}}">
+        <view class="tab_title">
+          <view class="tab_active">未缴费</view>
+          <view class="bottom_line"></view>
+        </view>
+        <view class="tab_title" bindtap="changeTab" data-tabId="2">历史记录</view>
+      </block>
+      <block wx:if="{{tab == 2}}">
+        <view class="tab_title" bindtap="changeTab" data-tabId="1">未缴费</view>
+        <view class="tab_title">
+          <view class="tab_active">历史记录</view>
+          <view class="bottom_line"></view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="data">
+    <block wx:for="{{tab == 1?dataList.notPay:dataList.paid}}" wx:key="idNum">
+      <view class="list">
+        <view class="item">
+          <view class="item_left">
+            <view class="img">
+              <image src="../../images/rent.png" mode="widthFix"></image>
+            </view>
+          </view>
+          <view class="item_right">
+            <view class="dataInfo">
+              <view class="date_title">
+                <text class="rentDate">{{item.rentDate}}</text>
+                <text class="rent">￥{{item.rent}}</text>
+              </view>
+              <view class="identNum">租赁编号：{{item.idNum}}</view>
+              <view class="endDate">截止日期：{{item.endDate}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="payBtn" bindtap="payfor" wx:if="{{tab == 1}}">立刻支付</view>
+      </view>
+    </block>
+  </view>
+
+</view>

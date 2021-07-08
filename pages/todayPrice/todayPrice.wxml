@@ -1,2 +1,35 @@
-<!--pages/todayPrice/todayPrice.wxml-->
-<text>pages/todayPrice/todayPrice.wxml</text>
+<view class="box">
+  <view class="top">
+    <view class="search">
+      <image src="../../images/search.png" mode="aspectFill"></image>
+      <input type="text" class="inpt" confirm-type="search" bindconfirm="bindSearch" placeholder="请输入想要搜索的产品" />
+    </view>
+  </view>
+  <view class="tab">
+    <view class="tab_item">
+      <view class="tab_title">序号</view>
+      <view class="tab_title">品名</view>
+      <view class="tab_title">单位</view>
+      <view class="tab_title">今日价格</view>
+      <view class="tab_title">涨跌幅</view>
+    </view>
+  </view>
+
+  <view class="content">
+    <block wx:for="{{dataList}}" wx:key="id">
+      <view class="cont_list">
+        <view class="text">{{item.id}}</view>
+        <view class="text">{{item.proName}}</view>
+        <view class="text">{{item.company}}</view>
+        <view class="text">
+          <text>{{item.price}}</text>
+          <image wx:if="{{item.symbol=='+'}}" src="../../images/rise.png" mode="aspectFill"></image>
+          <image wx:else src="../../images/down.png" mode="aspectFill"></image>
+        </view>
+        <view class="text range" wx:if="{{item.symbol=='+'}}">{{item.symbol}}{{item.range}}</view>
+        <view class="text color_active" wx:else >{{item.symbol}}{{item.range}}</view>
+      </view>
+    </block>
+
+  </view>
+</view>

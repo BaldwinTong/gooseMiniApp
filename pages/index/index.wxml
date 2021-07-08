@@ -13,19 +13,19 @@
 <view class="tab">
   <view class="iconList">
     <view class="item" bindtap="todayPrice">
-      <image src="../../images/今日价格.png"></image>
+      <image src="../../images/todayPrice.png"></image>
       <view class="iconTitle">今日价格</view>
     </view>
     <view class="item" bindtap="toHistoryPrice">
-      <image src="../../images/历史价格.png"></image>
+      <image src="../../images/historyPrice.png"></image>
       <view class="iconTitle">历史价格</view>
     </view>
     <view class="item" bindtap="toBusinssStyle">
-      <image src="../../images/企业风采.png"></image>
+      <image src="../../images/BusinssStyle.png"></image>
       <view class="iconTitle">企业风采</view>
     </view>
     <view class="item" bindtap="toPayMoney">
-      <image src="../../images/租金缴费.png"></image>
+      <image src="../../images/PayMoney.png"></image>
       <view class="iconTitle">租金缴纳</view>
     </view>
   </view>
@@ -34,7 +34,7 @@
 <view class="news">
   <view class="allLine">
     <view class="topTitle">
-      <image src="../../images/动态咨询.png" mode="aspectFit"></image>
+      <image src="../../images/consult.png" mode="aspectFit"></image>
       <view class="text">动态资讯</view>
     </view>
   </view>
@@ -43,7 +43,7 @@
     <block wx:for="{{newsList}}" wx:key="index">
       <view class="news_item">
         <view class="item_left">
-          <view class="news_title">{{item.title}}</view>
+          <view class="news_title overflow2">{{item.title}}</view>
           <view class="news_data">
             <view class="date">{{item.date}}</view>
             <view class="watch_num">浏览：{{item.watchNum}}人</view>

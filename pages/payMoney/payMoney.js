@@ -5,7 +5,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tab:1,
+    dataList:{
+      notPay:[{
+        rentDate:'四月份租金',
+        rent:5000,
+        idNum:10086,
+        endDate:'2021/5/5'
+      },{
+        rentDate:'五月份租金',
+        rent:5000,
+        idNum:10000,
+        endDate:'2021/5/5'
+      },{
+        rentDate:'六月份租金',
+        rent:5000,
+        idNum:10010,
+        endDate:'2021/5/5'
+      }],
+      paid:[{
+        rentDate:'一月份租金',
+        rent:5000,
+        idNum:10086,
+        endDate:'2021/5/5'
+      },{
+        rentDate:'二月份租金',
+        rent:5000,
+        idNum:10000,
+        endDate:'2021/5/5'
+      },{
+        rentDate:'三月份租金',
+        rent:5000,
+        idNum:10010,
+        endDate:'2021/5/5'
+      }],
+    }
   },
 
   /**
@@ -62,5 +96,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  changeTab(e){
+    this.setData({
+      tab:e.currentTarget.dataset.tabid
+    })
+  },
+
+  payfor(){
+    wx.showToast({
+      title: '支付失败！',
+      icon:'none',
+      duration:1500
+    })
   }
+
+  
 })

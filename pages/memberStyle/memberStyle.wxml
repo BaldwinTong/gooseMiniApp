@@ -1,2 +1,16 @@
-<!--pages/memberStyle/memberStyle.wxml-->
-<text>pages/memberStyle/memberStyle.wxml</text>
+<view class="page">
+  <view class="article">
+    <view class="content">
+      都斛镇，一个风景秀丽的“鱼米之乡”。它是江门、珠海、中山、澳门等地进入台山市南线的第一站。广东西部沿海高速公路、省道麻阳线和台赤公路交叉贯通全镇。当前，粤港澳大湾区战略为都斛镇带来了西拓的位置优势，是集农业、海产、旅游等资源于一身的魅力乡镇。
+    </view>
+    <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181112%2Fc9e6eae27f1f447f803977d9edc3988f.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628327721&t=0e87f2cdae55449d73d8abf84793aa64" mode="widthFix"></image>
+    <view class="content">
+      其中都斛镇大米远近闻名，同时都斛镇的大米现代化进程也高居全省前列，同时都斛镇海鲜一条街位于台山市都斛镇中心。由于都斛镇坐落在黄矛海域与西江河的咸、淡水交汇处，邻近新会崖门和珠海斗门，因此这里主要盛产虾、蟹，味道特别鲜甜。都斛镇的林基路纪念公园是个缅怀先烈的好地方。
+    </view>
+    <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F10652451739%2F0.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628327721&t=4af794c83f9276c59c98ba251c6b0b89" mode="widthFix"></image>
+    <view class="content">都斛镇以林基路纪念公园、农耕文化馆和海鲜街为核心打造的新农村正成为台山旅游的一个新亮点。
+    </view>
+    <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180210%2Fa5d768da244d468786a9c8743f525943.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628327763&t=373e87ae41cb3edf2e2a0ec9192263ae" mode="widthFix"></image>
+  </view>
+
+</view>

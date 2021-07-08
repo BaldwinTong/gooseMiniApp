@@ -117,5 +117,10 @@
   font-weight: normal;
 }
 
+.color_active1{
+  color: rgba(45, 45, 48, 0.288);
+  font-size: 24rpx;
+  font-weight: normal;
+}
 
 

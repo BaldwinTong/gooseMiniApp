@@ -2,7 +2,7 @@
   <view class="top">
     <view class="dateList">
       <block wx:for="{{dateList}}" wx:key="index">
-        <view class="{{choseDate == item.dayN ?'top_item_active':'top_item'}}" bindtap="clickActive" data-id="{{item.dayN}}">
+        <view class="{{choseDate == item.id ?'top_item_active':'top_item'}}" bindtap="clickActive" data-id="{{item.id}}">
           <view class="dayC">{{item.dayC}}</view>
           <view class="dayN">{{item.dayN}}</view>
         </view>
@@ -31,11 +31,12 @@
         <view class="text">{{item.company}}</view>
         <view class="text">
           <text>{{item.price}}</text>
-          <image wx:if="{{item.symbol=='+'}}" src="../../images/rise.png" mode="aspectFill"></image>
-          <image wx:else src="../../images/down.png" mode="aspectFill"></image>
+          <image wx:if="{{item.type=='rise'}}" src="../../images/rise.png" mode="aspectFill"></image>
+          <image wx:if="{{item.type=='down'}}" src="../../images/down.png" mode="aspectFill"></image>
         </view>
-        <view class="text range" wx:if="{{item.symbol=='+'}}">{{item.symbol}}{{item.range}}</view>
-        <view class="text color_active" wx:else>{{item.symbol}}{{item.range}}</view>
+        <view class="text range" wx:if="{{item.type=='rise'}}">{{item.symbol}}{{item.range}}</view>
+        <view class="text color_active" wx:if="{{item.type=='down'}}">{{item.symbol}}{{item.range}}</view>
+        <view class="text color_active" wx:if="{{item.type=='none'}}">{{item.symbol}}{{item.range}}</view>
       </view>
     </block>
 

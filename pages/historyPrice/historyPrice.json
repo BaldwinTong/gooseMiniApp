@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "历史价格"
+  "navigationBarTitleText": "历史价格",
+  "usingComponents": {
+    "van-calendar": "../../vant/calendar"
+  }
 }

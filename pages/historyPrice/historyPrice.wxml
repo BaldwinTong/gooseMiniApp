@@ -7,7 +7,7 @@
           <view class="dayN">{{item.dayN}}</view>
         </view>
       </block>
-      <view class="calendar">
+      <view class="calendar" bindtap="onDisplay">
         <image src="../../images/date.png" mode="widthFix"></image>
         <view class="chose">选择日期</view>
       </view>
@@ -42,3 +42,5 @@
 
   </view>
 </view>
+
+<van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />

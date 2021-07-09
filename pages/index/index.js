@@ -6,16 +6,16 @@ Page({
     ],
     newsList:[
       {
-        title:'跌多涨少 这些菜今天价格又跌了',
+        title:'养马岗鹅赚钱吗？马岗鹅养殖前景如何？',
         date:'2021-2-2',
         watchNum:269,
-        imageUrl:'../../images/01.png'
+        imageUrl:'https://img2.baidu.com/it/u=198033356,3133871595&fm=224&fmt=auto&gp=0.jpg'
       },
       {
-        title:'定了！明年就种“它们”！春节期间这些菜价格高、走货快!',
+        title:'7月5日马岗鹅价格：鹅苗涨价！地销鹅跌价！',
         date:'2021-2-2',
         watchNum:745,
-        imageUrl:'../../images/02.png'
+        imageUrl:'https://img1.baidu.com/it/u=708253835,1600959509&fm=26&fmt=auto&gp=0.jpg'
       },
       {
         title:'鹅苗养多少天可以放养？鹅苗什么时候养最好?如何养殖鹅苗？',

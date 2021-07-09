@@ -9,6 +9,14 @@
   box-sizing: border-box;
 }
 
+.article .title{
+  color: #000;
+  font-size: 28rpx;
+  font-weight: 600;
+  letter-spacing:2rpx;
+  margin: 20rpx 0;
+}
+
 .article .content{
   color: #696969;
   font-size: 28rpx;

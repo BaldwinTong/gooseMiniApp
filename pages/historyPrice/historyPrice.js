@@ -1,7 +1,6 @@
 // pages/todayPrice/todayPrice.js
 let utils = require('../../utils/util.js');
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -116,9 +115,7 @@ Page({
       dayC: '六',
       dayN: '10',
     }],
-
-    // weekDays: ['日','一','二','三','四','五','六',],
-    // days:[],
+    show: false,
     choseDate: 16,
   },
 
@@ -126,7 +123,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getDate()
+    this.getDate();
+    this.getWeekDate()
   },
 
   /**
@@ -183,7 +181,6 @@ Page({
     let date = new Date();
     let weekDay = date.getDay();
     let day = date.getDate();
-
     switch (weekDay) {
       case 0:
         that.data.dateList.forEach(item => {
@@ -250,6 +247,39 @@ Page({
           }
         })
     }
+  },
+
+  getWeekDate() {
+    var date = new Date();
+    var week = date.getDay();
+    var timesStamp = date.getTime();
+    var day = date.getDate();
+    var weekArr = [{
+      week: '',
+      day: ''
+    }, {
+      week: '',
+      day: ''
+    }, {
+      week: '',
+      day: ''
+    }, {
+      week: '',
+      day: ''
+    }, {
+      week: '',
+      day: ''
+    }, {
+      week: '',
+      day: ''
+    }, {
+      week: '',
+      day: ''
+    }];
+    //获取日
+
+
+
 
 
 
@@ -266,6 +296,27 @@ Page({
         })
       }
     })
-  }
+  },
+
+  onDisplay() {
+    this.setData({
+      show: true
+    });
+  },
+  onClose() {
+    this.setData({
+      show: false
+    });
+  },
+  formatDate(date) {
+    date = new Date(date);
+    return `${date.getMonth() + 1}/${date.getDate()}`;
+  },
+  onConfirm(event) {
+    this.setData({
+      show: false,
+      date: this.formatDate(event.detail),
+    });
+  },
 
 })

@@ -7,7 +7,7 @@ Page({
   data: {
     dataList:[{
       id:1,
-      proName:'马岗鹅苗',
+      proName:'马冈鹅苗',
       company:'双',
       price:'26.00',
       range:'02.00',

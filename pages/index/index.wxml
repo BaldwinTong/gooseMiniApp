@@ -35,7 +35,8 @@
   <view class="allLine">
     <view class="topTitle">
       <image src="../../images/consult.png" mode="aspectFit"></image>
-      <view class="text">动态资讯</view>
+      <view class="text" >动态资讯</view>
+      <comm bindchange="changessss" ></comm>
     </view>
   </view>
 

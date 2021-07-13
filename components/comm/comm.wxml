@@ -1,0 +1,2 @@
+<!--components/com/comm.wxml-->
+<text bindtap="changeName">components/com/comm.wxml</text>

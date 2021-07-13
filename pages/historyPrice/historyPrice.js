@@ -7,7 +7,7 @@ Page({
   data: {
     dataList: [{
       id: 1,
-      proName: '马岗鹅苗',
+      proName: '马冈鹅苗',
       company: '双',
       price: '26.00',
       range: '02.00',
@@ -89,31 +89,31 @@ Page({
     dateList: [{
       id: 0,
       dayC: '日',
-      dayN: '4',
+      dayN: '11',
     }, {
       id: 1,
       dayC: '一',
-      dayN: '5',
+      dayN: '12',
     }, {
       id: 2,
       dayC: '二',
-      dayN: '6',
+      dayN: '13',
     }, {
       id: 3,
       dayC: '三',
-      dayN: '7',
+      dayN: '14',
     }, {
       id: 4,
       dayC: '四',
-      dayN: '8',
+      dayN: '15',
     }, {
       id: 5,
       dayC: '五',
-      dayN: '9',
+      dayN: '16',
     }, {
       id: 6,
       dayC: '六',
-      dayN: '10',
+      dayN: '17',
     }],
     show: false,
     choseDate: 16,
@@ -250,37 +250,27 @@ Page({
   },
 
   getWeekDate() {
-    var date = new Date();
-    var week = date.getDay();
-    var timesStamp = date.getTime();
-    var day = date.getDate();
-    var weekArr = [{
-      week: '',
-      day: ''
-    }, {
-      week: '',
-      day: ''
-    }, {
-      week: '',
-      day: ''
-    }, {
-      week: '',
-      day: ''
-    }, {
-      week: '',
-      day: ''
-    }, {
-      week: '',
-      day: ''
-    }, {
-      week: '',
-      day: ''
-    }];
-    //获取日
+    let that = this;
+    var days = [];
+    for (var i = 1; i <= 7; i++) {
+        days[i - 1] = utils.week(i).getDate();
+    }
 
+    let list =  this.data.dateList
+    list.map(item=>{
+      for (let j = 0; j < days.length; j++) {
+        if (i == item.id) {
+          item.dayN = days[j]
+        }
+      }
+    })
+    console.log(list);
+    this.setData({
+      dateList:list
+    })
 
-
-
+    
+   
 
 
   },
@@ -289,7 +279,6 @@ Page({
     let that = this;
     let day = e.currentTarget.dataset.id;
     this.data.dateList.forEach((item, i) => {
-      console.log(e, item.id);
       if (item.id == day) {
         that.setData({
           choseDate: day

@@ -1,0 +1,56 @@
+<view class="page">
+  <view class="item">
+    <view class="title">企业名称</view>
+    <view>
+      <input type="text" class="input" placeholder-class="placeH" placeholder="请输入企业名称" />
+    </view>
+  </view>
+
+  <view class="item">
+    <view class="title">注册号</view>
+    <view class="itemCont">
+      <input type="text" class="input" placeholder-class="placeH" placeholder="请输入或识别营业执照注册号" />
+      <image class="scan" bindtap="scan" src="../../images/scan.png" mode="aspectFill"></image>
+    </view>
+  </view>
+
+  <view class="item item2">
+    <view class="title">
+      <view class="title2">营业执照</view>
+      <view class="title_ps">上传您的营业执照</view>
+    </view>
+    <view class="itemCont">
+      <image class="IDimage" bindtap="takeFront" src="../../images/businessLicense.png" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>
+<view class="line"></view>
+<view class="page">
+  <view class="item">
+    <view class="title">手机号码</view>
+    <view>
+      <input type="text" class="input" placeholder-class="placeH" placeholder="请输入您的手机号码" />
+    </view>
+  </view>
+  <view class="item">
+    <view class="title">验证码</view>
+    <view class="itemCont">
+      <input type="text" class="input" placeholder-class="placeH" placeholder="请输入您的验证码" />
+      <view class="getCode" wx:if="{{!sendMess}}" bindtap="getCode">获取验证码</view>
+      <view class="getCode tokenCode" wx:else >{{time}}s</view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="title">登录密码</view>
+    <view>
+      <input type="text" class="input" placeholder-class="placeH" placeholder="请输入登录密码" />
+    </view>
+  </view>
+  <view class="item">
+    <view class="title">确认密码</view>
+    <view>
+      <input type="text" class="input" placeholder-class="placeH" placeholder="请再次输入登录密码" />
+    </view>
+  </view>
+  <view class="btn">注  册</view>
+</view>

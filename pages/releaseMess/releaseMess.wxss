@@ -1,0 +1,164 @@
+/* pages/releaseMess/releaseMess.wxss */
+page{
+  background-color: #F1F2F5;
+}
+.page{
+  background-color: #fff;
+}
+.tab{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.active{
+  width: 48%;
+  height: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  color: #ffffff;
+  background-color: #0083FF;
+}
+
+.tab .tab1{
+  width: 48%;
+  height: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  color: #919191;
+}
+
+.line{
+  width: 100%;
+  height: 28rpx;
+  background-color: #F1F2F5;
+}
+
+.container{
+  width: 100%;
+}
+
+.mt{
+  margin-top: 28rpx;
+  margin-bottom: 80rpx;
+
+}
+
+.container .item{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 28rpx 32rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #F3F4F7;
+  position: relative;
+}
+
+.container .item .title{
+  width: 188rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.placeH{
+  font-size: 24rpx;
+  color: #B9B9B9;
+}
+
+.container .item .cont{
+  color: #B9B9B9;
+  font-size: 24rpx;
+}
+
+.container .item .icon{
+  width: 18rpx;
+  height: 18rpx;
+  position: absolute;
+  top: 50%;
+  right: 32rpx;
+  transform: translateY(-50%);
+}
+
+.container .item2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+} 
+
+.container .item2 .textA{
+  margin: 16rpx 0 0 32rpx;
+}
+
+textarea{
+  height: 150rpx;
+}
+
+.container .item2 .images{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container .item2 .images .imageitem{
+  width: 128rpx;
+  height: 128rpx;
+  position: relative;
+}
+
+.container .item2 .images image{
+  width: 128rpx;
+  height: 128rpx;
+  margin-right: 30rpx;
+}
+
+.container .item2 .images .delicon{
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 0;
+  right: -30rpx;
+}
+
+.container .item .dealMode{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container .item .dealMode .modeItem{
+  padding: 4rpx 20rpx;
+  color: #717171;
+  border: 1px solid #717171;
+  margin-right: 24rpx;
+  border-radius: 50rpx;
+}
+
+.modeActive{
+  color: #fff;
+  padding: 4rpx 20rpx;
+  background-color: #F48623;
+  border: none;
+  border-radius: 50rpx;
+  margin-right: 24rpx;
+}
+
+.btn{
+  width: 686rpx;
+  height: 84rpx;
+  background-color: #0083FF;
+  text-align: center;
+  line-height: 84rpx;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 80rpx;
+  border-radius: 8rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

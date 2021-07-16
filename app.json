@@ -5,7 +5,10 @@
     "pages/todayPrice/todayPrice",
     "pages/historyPrice/historyPrice",
     "pages/memberStyle/memberStyle",
-    "pages/payMoney/payMoney"
+    "pages/payMoney/payMoney",
+    "pages/enterpriseRegister/enterpriseRegister",
+    "pages/personalRegister/personalRegister",
+    "pages/releaseMess/releaseMess"
   ],
   "window":{
     "backgroundTextStyle":"light",

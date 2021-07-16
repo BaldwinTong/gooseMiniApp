@@ -24,8 +24,18 @@ const week = i => {
   return start;
 }
 
+const countDown = (val) => {
+  if (val == 0) {
+    val = 3
+  } else {
+    val--;
+  }
+  return val
+}
+
 
 module.exports = {
   formatTime,
-  week
+  week,
+  countDown
 }

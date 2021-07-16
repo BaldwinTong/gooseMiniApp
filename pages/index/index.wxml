@@ -33,7 +33,7 @@
 <view class="blank_line"></view>
 <view class="news">
   <view class="allLine">
-    <view class="topTitle">
+    <view class="topTitle" bindtap="click">
       <image src="../../images/consult.png" mode="aspectFit"></image>
       <view class="text" >动态资讯</view>
       <comm bindchange="changessss" ></comm>
@@ -57,3 +57,19 @@
     </block>
   </view>
 </view>
+
+<!-- 弹框 -->
+<van-popup show="{{ showPopup }}" round bind:close="onClose">
+  <view class="popupBox">
+      <view class="title" bindtap="click2">选择注册模式</view>
+      <view class="registerType">
+        <view class="type_left" bindtap="toPersonalReg">
+          <image src="../../images/personal.png" mode="aspectFill"></image>
+          <view class="text">个人注册</view>
+        </view>
+        <view class="type_right" bindtap="toBusinessReg">
+          <image src="../../images/business.png" mode="aspectFill"></image>
+          <view class="text">企业注册</view></view>
+      </view>
+  </view>
+</van-popup>

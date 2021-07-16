@@ -35,6 +35,24 @@
           "pathName": "pages/payMoney/payMoney",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "企业注册",
+          "pathName": "pages/enterpriseRegister/enterpriseRegister",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人注册",
+          "pathName": "pages/personalRegister/personalRegister",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "信息发布",
+          "pathName": "pages/releaseMess/releaseMess",
+          "query": "",
+          "scene": null
         }
       ]
     }

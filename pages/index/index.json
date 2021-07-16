@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "comm":"../../components/comm/comm"
+    "comm":"../../components/comm/comm",
+    "van-popup": "../../vant/popup/index"
   },
   "component": true
 }

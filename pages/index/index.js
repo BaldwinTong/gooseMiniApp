@@ -1,6 +1,7 @@
 Page({
   data: {
     demoData:'555555555',
+    showPopup:false,
     imageList: [
       "../../images/banner.png",
       "../../images/banner2.png"
@@ -56,6 +57,37 @@ Page({
       url: '../payMoney/payMoney',
     })
   },
+
+  toPersonalReg(){
+    this.onClose();
+    wx.navigateTo({
+      url: '../personalRegister/personalRegister',
+    })
+  },
+
+  toBusinessReg(){
+    this.onClose();
+    wx.navigateTo({
+      url: '../enterpriseRegister/enterpriseRegister',
+    })
+  },
+
+  click2(){
+    wx.navigateTo({
+      url: '../releaseMess/releaseMess',
+    })
+  },
+
+  onClose() {
+    this.setData({ showPopup: false });
+  },
+
+  click(){
+    this.setData({showPopup:true})
+  },
+
+
+
   changessss(event) {
     console.log(event.detail)
     // { name: '李四' }

@@ -71,9 +71,19 @@ page{
   color: #B9B9B9;
 }
 
-.container .item .cont{
+.container .item .pick{
   color: #B9B9B9;
   font-size: 24rpx;
+  flex: 1;
+}
+
+.container .item .picker{
+  width: 100%;
+  height: 100%;
+}
+.container .item .font{
+  color: #000;
+  font-size: 28rpx;
 }
 
 .container .item .icon{
@@ -93,7 +103,7 @@ page{
 } 
 
 .container .item2 .textA{
-  margin: 16rpx 0 0 32rpx;
+  margin: 16rpx 32rpx;
 }
 
 textarea{
@@ -105,11 +115,20 @@ textarea{
   justify-content: flex-start;
   align-items: center;
 }
+.container .item2 .imgList{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 .container .item2 .images .imageitem{
   width: 128rpx;
   height: 128rpx;
   position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 30rpx;
 }
 
 .container .item2 .images image{

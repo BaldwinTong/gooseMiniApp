@@ -16,7 +16,7 @@ const formatNumber = n => {
 
 const week = i => {
   //取得当前日期一周内的某一天
-  var now = new Date('2021-7-12');
+  var now = new Date();
   var n = now.getDay(); //获取当前日历的星期几
   var start = new Date();
   start.setDate(now.getDate() - n + i); //取得一周内的第一天、第二天、第三天...

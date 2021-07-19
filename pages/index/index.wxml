@@ -12,17 +12,31 @@
 
 <view class="tab">
   <view class="iconList">
-    <view class="item" bindtap="todayPrice">
+    <view class="item" bindtap="toHistoryPrice">
+      <image src="../../images/todayPrice.png"></image>
+      <view class="iconTitle">指导价格</view>
+    </view>
+    <view class="item" bindtap="toReleaseMess">
+      <image src="../../images/missonPush.png"></image>
+      <view class="iconTitle">信息发布</view>
+    </view>
+    <view class="item" bindtap="toregister">
+      <image src="../../images/userReg.png"></image>
+      <view class="iconTitle">用户注册</view>
+    </view>
+  </view>
+  <view class="iconList">
+    <!-- <view class="item" bindtap="todayPrice">
       <image src="../../images/todayPrice.png"></image>
       <view class="iconTitle">今日价格</view>
-    </view>
-    <view class="item" bindtap="toHistoryPrice">
-      <image src="../../images/historyPrice.png"></image>
-      <view class="iconTitle">历史价格</view>
+    </view> -->
+    <view class="item" bindtap="toCloudClass">
+      <image src="../../images/cloudClass.png"></image>
+      <view class="iconTitle">云课堂</view>
     </view>
     <view class="item" bindtap="toBusinssStyle">
-      <image src="../../images/BusinssStyle.png"></image>
-      <view class="iconTitle">企业风采</view>
+      <image src="../../images/CultureTechnology.png"></image>
+      <view class="iconTitle">养殖技术</view>
     </view>
     <view class="item" bindtap="toPayMoney">
       <image src="../../images/PayMoney.png"></image>
@@ -33,7 +47,7 @@
 <view class="blank_line"></view>
 <view class="news">
   <view class="allLine">
-    <view class="topTitle" bindtap="click">
+    <view class="topTitle">
       <image src="../../images/consult.png" mode="aspectFit"></image>
       <view class="text" >动态资讯</view>
       <comm bindchange="changessss" ></comm>

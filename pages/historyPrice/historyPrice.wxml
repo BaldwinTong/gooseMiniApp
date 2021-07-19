@@ -13,6 +13,12 @@
       </view>
     </view>
   </view>
+  <view class="top mt">
+    <view class="search">
+      <image src="../../images/search.png" mode="aspectFill"></image>
+      <input type="text" class="inpt" confirm-type="search" bindconfirm="bindSearch" placeholder="请输入想要搜索的产品" />
+    </view>
+  </view>
   <view class="tab">
     <view class="tab_item">
       <view class="tab_title">序号</view>

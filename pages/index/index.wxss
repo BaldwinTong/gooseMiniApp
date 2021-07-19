@@ -26,7 +26,7 @@
 .iconList{
   width: 686rpx;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 60rpx auto 20rpx;
 }

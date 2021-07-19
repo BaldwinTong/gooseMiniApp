@@ -72,18 +72,29 @@ Page({
     })
   },
 
-  click2(){
+  toReleaseMess(){
     wx.navigateTo({
       url: '../releaseMess/releaseMess',
     })
   },
 
+  
+
+
   onClose() {
     this.setData({ showPopup: false });
   },
 
-  click(){
+  toregister(){
     this.setData({showPopup:true})
+  },
+
+  toCloudClass(){
+    wx.showToast({
+      title: '敬请期待！',
+      icon:'none',
+      duration:1500
+    })
   },
 
 

@@ -5,12 +5,22 @@
 <view class="line"></view>
 <view wx:if="{{tabIndex== 0}}">
   <view class="page">
-
-
     <view class="container">
       <view class="item">
         <view class="title">选择品类</view>
-        <view class="cont">请选择产品品类</view>
+        <view class="cont pick">
+          <picker wx:if="{{!categoryArray[categoryindex]}}" bindchange="bindPickercategoryChange" value="{{categoryindex}}" range="{{categoryArray}}">
+            <view class="picker">
+              输入品类
+            </view>
+          </picker>
+          <picker wx:else bindchange="bindPickercategoryChange" value="{{categoryindex}}" range="{{categoryArray}}">
+            <view class="picker font">
+              {{categoryArray[categoryindex]}}
+            </view>
+          </picker>
+        </view>
+
         <image class="icon" src="../../images/choiceIcon.png" mode="aspectFill"></image>
       </view>
       <view class="item">
@@ -22,12 +32,16 @@
 
       <view class="item item2">
         <view class="title">产品描述</view>
-        <textarea class="cont textA" bindblur="bindTextAreaBlur" placeholder="自动变高" />
+        <textarea class="cont textA" placeholder="输入产品描述" />
         <view class="images">
-          <image src="../../images/addImage.png" mode="aspectFill"></image>
-          <view class="imageitem">
-            <image src="../../images/addImage.png"></image>
-            <image class="delicon" src="../../images/delImage.png" mode="aspectFill"></image>
+          <image bindtap="addImage" wx:if="{{imageList.length<3}}" src="../../images/addImage.png" mode="aspectFill">
+          </image>
+          <view class="imageitem" wx:if="{{imageList.length>0}}" wx:for="{{imageList}}" wx:key='*this'
+            wx:for-item="itemUrl">
+            <image src="{{itemUrl}}" mode="aspectFill"></image>
+            <image class="delicon" bindtap="delImg" data-imgindex="{{index}}" src="../../images/delImage.png"
+              mode="aspectFill">
+            </image>
           </view>
         </view>
 
@@ -35,7 +49,19 @@
 
       <view class="item">
         <view class="title">产地</view>
-        <view class="cont">请选择产地</view>
+        <view class="cont pick">
+          <picker wx:if="{{!placeOrigin[placeindex]}}" bindchange="bindPickerPlaceChange" value="{{placeindex}}"
+            range="{{placeOrigin}}">
+            <view class="picker">
+              请选择产地
+            </view>
+          </picker>
+          <picker wx:else bindchange="bindPickerPlaceChange" value="{{placeindex}}" range="{{placeOrigin}}">
+            <view class="picker font">
+              {{placeOrigin[placeindex]}}
+            </view>
+          </picker>
+        </view>
         <image class="icon" src="../../images/choiceIcon.png" mode="aspectFill"></image>
       </view>
     </view>
@@ -86,5 +112,70 @@
 </view>
 
 <!-- 采购商 -->
+<view wx:if="{{tabIndex== 1}}">
+  <view class="page">
+    <view class="container">
+      <view class="item">
+        <view class="title">采购品类</view>
+        <view class="cont">请选择采购品类</view>
+        <image class="icon" src="../../images/choiceIcon.png" mode="aspectFill"></image>
+      </view>
+      <view class="item">
+        <view class="title">标题</view>
+        <view>
+          <input type="text" class="input" placeholder-class="placeH" placeholder="输入产品标题" />
+        </view>
+      </view>
+
+      <view class="item item2">
+        <view class="title">补充说明</view>
+        <textarea class="cont textA" bindblur="bindTextAreaBlur" placeholder="补充说明一下所需采购的产品" />
+        <view class="images">
+          <image src="../../images/addImage.png" mode="aspectFill"></image>
+          <view class="imageitem">
+            <image src="../../images/addImage.png"></image>
+            <image class="delicon" src="../../images/delImage.png" mode="aspectFill"></image>
+          </view>
+        </view>
+
+      </view>
+      <view class="item">
+        <view class="title">采购数量</view>
+        <view>
+          <input type="text" class="input" placeholder-class="placeH" placeholder="输入采购数量" />
+        </view>
+      </view>
+
+      <view class="item">
+        <view class="title">单位</view>
+        <view class="cont">请选择单位</view>
+        <image class="icon" src="../../images/choiceIcon.png" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="page mt">
+    <view class="container">
+      <view class="item">
+        <view class="title">收货地址</view>
+        <view class="cont">请选择收货地址</view>
+        <image class="icon" src="../../images/choiceIcon.png" mode="aspectFill"></image>
+      </view>
+      <view class="item">
+        <view class="title">联系人</view>
+        <view>
+          <input type="text" class="input" placeholder-class="placeH" placeholder="输入联系人" />
+        </view>
+      </view>
+      <view class="item">
+        <view class="title">联系电话</view>
+        <view>
+          <input type="text" class="input" placeholder-class="placeH" placeholder="输入联系电话" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
 
 <view class="btn">确认发布</view>

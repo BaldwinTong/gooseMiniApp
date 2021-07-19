@@ -175,6 +175,13 @@ Page({
   onShareAppMessage: function () {
 
   },
+  bindSearch(){
+    wx.showToast({
+      title: '暂无数据',
+      icon:'none',
+      duration:1500
+    })
+  },
 
   getDate() {
     let that = this;
@@ -252,19 +259,18 @@ Page({
   getWeekDate() {
     let that = this;
     var days = [];
-    for (var i = 1; i <= 7; i++) {
-        days[i - 1] = utils.week(i).getDate();
+    for (var i = 0; i < 7; i++) {
+        days[i] = utils.week(i).getDate();
     }
-
     let list =  this.data.dateList
     list.map(item=>{
       for (let j = 0; j < days.length; j++) {
-        if (i == item.id) {
+        if (j == item.id) {
+          console.log(item.id);
           item.dayN = days[j]
         }
       }
     })
-    console.log(list);
     this.setData({
       dateList:list
     })

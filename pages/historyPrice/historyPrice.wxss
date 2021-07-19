@@ -60,6 +60,36 @@
   margin-bottom: 12rpx;
 }
 
+.top .search{
+  width: 686rpx;
+  height: 70rpx;
+  border-radius: 18rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.top .search image{
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 50%;
+  left: 35rpx;
+  transform: translateY(-50%);
+}
+
+.top .search .inpt{
+  width: 90%;
+  height: 100%;
+  margin-left: 80rpx;
+}
+
+.mt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(235,235,235,0.5);
+}
+
 
 
 .tab {

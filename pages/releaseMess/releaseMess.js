@@ -5,9 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabIndex:0,
-    tradingIndex:0,
-    saleIndex:0
+    tabIndex: 0,
+    tradingIndex: 0,
+    saleIndex: 0,
+    categoryArray: ['鸭苗', '苹果', '荔枝', '鸡苗'],
+    placeOrigin:['江门','佛山','珠海','揭阳','湛江'],
+    imageList:[]
   },
 
   /**
@@ -66,24 +69,79 @@ Page({
 
   },
 
-  changeTabs(e){
-    let { id } = e.currentTarget.dataset;
+  changeTabs(e) {
+    let {
+      id
+    } = e.currentTarget.dataset;
     this.setData({
-      tabIndex:id
+      tabIndex: id
     })
   },
 
-  tradingMode(e){
-    let { id } = e.currentTarget.dataset;
+  tradingMode(e) {
+    let {
+      id
+    } = e.currentTarget.dataset;
     this.setData({
-      tradingIndex:id
+      tradingIndex: id
     })
   },
 
-  salesStatus(e){
-    let { id } = e.currentTarget.dataset;
+  salesStatus(e) {
+    let {
+      id
+    } = e.currentTarget.dataset;
     this.setData({
-      saleIndex:id
+      saleIndex: id
     })
   },
+
+  //品类选择
+  bindPickercategoryChange: function (e) {
+    console.log(e.detail.value);
+    this.setData({
+      categoryindex: e.detail.value
+    })
+  },
+
+  //产地选择
+  bindPickerPlaceChange: function (e) {
+    console.log(e.detail.value);
+    this.setData({
+      placeindex: e.detail.value
+    })
+  },
+
+
+
+  //图片上传
+  addImage(){
+    let that = this;
+    let {imageList} = this.data;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success (res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        const tempFilePaths = res.tempFilePaths;
+        imageList.push(tempFilePaths[0])
+        console.log(tempFilePaths);
+        that.setData({
+          imageList
+        })
+      }
+    })
+  },
+
+  delImg(e){
+    let { imageList } = this.data;
+    let ImgIndex = e.currentTarget.dataset.imgindex;
+    console.log(ImgIndex);
+    imageList.splice(ImgIndex,1);
+    this.setData({
+      imageList
+    })
+
+  }
 })

@@ -49,41 +49,52 @@
   <view class="allLine">
     <view class="topTitle">
       <image src="../../images/consult.png" mode="aspectFit"></image>
-      <view class="text" >动态资讯</view>
-      <comm bindchange="changessss" ></comm>
+      <view class="text">热销推荐</view>
+      <comm bindchange="changessss"></comm>
     </view>
   </view>
 
   <view class="newsList">
-    <block wx:for="{{newsList}}" wx:key="index">
-      <view class="news_item">
-        <view class="item_left">
-          <view class="news_title overflow2">{{item.title}}</view>
-          <view class="news_data">
-            <view class="date">{{item.date}}</view>
-            <view class="watch_num">浏览：{{item.watchNum}}人</view>
+    <swiper autoplay="true" circular="true" interval='4000' duration="5000" easing-function="linear" vertical="true" display-multiple-items="3" class="swiper2">
+      <block wx:for="{{newsList}}" wx:key="index">
+        <swiper-item>
+          <view class="news_item">
+            <view class="item_right">
+              <image src="{{item.imageUrl}}" mode="aspectFill"></image>
+            </view>
+            <view class="item_left">
+              <view>
+                <view class="news_title overflow1">
+                <text class="tag" wx:if="{{item.UrgentSale}}">急售</text>
+                {{item.title}}</view>
+                <view class="news_data">
+                  <view class="date">销量：{{item.saleNum}}</view>
+                  <view class="watch_num">当前库存：{{item.stock}}</view>
+                </view>
+              </view>
+              <view class="price"><text>￥</text>{{item.price}}</view>
+            </view>
           </view>
-        </view>
-        <view class="item_right">
-          <image src="{{item.imageUrl}}" mode="aspectFit"></image>
-        </view>
-      </view>
-    </block>
+        </swiper-item>
+      </block>
+      </swiper>
+
   </view>
 </view>
 
 <!-- 弹框 -->
 <van-popup show="{{ showPopup }}" round bind:close="onClose">
   <view class="popupBox">
-      <view class="title" bindtap="click2">选择注册模式</view>
-      <view class="registerType">
-        <view class="type_left" bindtap="toPersonalReg">
-          <image src="../../images/personal.png" mode="aspectFill"></image>
-          <view class="text">个人注册</view>
-        </view>
-        <view class="type_right" bindtap="toBusinessReg">
-          <image src="../../images/business.png" mode="aspectFill"></image>
-          <view class="text">企业注册</view></view>
+    <view class="title" bindtap="click2">选择注册模式</view>
+    <view class="registerType">
+      <view class="type_left" bindtap="toPersonalReg">
+        <image src="../../images/personal.png" mode="aspectFill"></image>
+        <view class="text">个人注册</view>
       </view>
+      <view class="type_right" bindtap="toBusinessReg">
+        <image src="../../images/business.png" mode="aspectFill"></image>
+        <view class="text">企业注册</view>
+      </view>
+    </view>
   </view>
 </van-popup>

@@ -117,7 +117,19 @@
     <view class="container">
       <view class="item">
         <view class="title">采购品类</view>
-        <view class="cont">请选择采购品类</view>
+        <view class="cont pick">
+          <picker wx:if="{{!categoryArray[categoryindex]}}" bindchange="bindPickercategoryChange" value="{{categoryindex}}" range="{{categoryArray}}">
+            <view class="picker">
+              请选择采购品类
+            </view>
+          </picker>
+          <picker wx:else bindchange="bindPickercategoryChange" value="{{categoryindex}}" range="{{categoryArray}}">
+            <view class="picker font">
+              {{categoryArray[categoryindex]}}
+            </view>
+          </picker>
+        </view>
+
         <image class="icon" src="../../images/choiceIcon.png" mode="aspectFill"></image>
       </view>
       <view class="item">
@@ -131,10 +143,14 @@
         <view class="title">补充说明</view>
         <textarea class="cont textA" bindblur="bindTextAreaBlur" placeholder="补充说明一下所需采购的产品" />
         <view class="images">
-          <image src="../../images/addImage.png" mode="aspectFill"></image>
-          <view class="imageitem">
-            <image src="../../images/addImage.png"></image>
-            <image class="delicon" src="../../images/delImage.png" mode="aspectFill"></image>
+          <image bindtap="addImage" wx:if="{{imageList.length<3}}" src="../../images/addImage.png" mode="aspectFill">
+          </image>
+          <view class="imageitem" wx:if="{{imageList.length>0}}" wx:for="{{imageList}}" wx:key='*this'
+            wx:for-item="itemUrl">
+            <image src="{{itemUrl}}" mode="aspectFill"></image>
+            <image class="delicon" bindtap="delImg" data-imgindex="{{index}}" src="../../images/delImage.png"
+              mode="aspectFill">
+            </image>
           </view>
         </view>
 

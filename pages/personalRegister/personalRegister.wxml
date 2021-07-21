@@ -21,7 +21,7 @@
       </view>
     </view>
     <view class="itemCont">
-      <image class="IDimage" bindtap="takeFront" src="../../images/idFront.png" mode="aspectFill"></image>
+      <image class="IDimage" bindtap="takeFront" src="{{IDFont}}" mode="aspectFill"></image>
     </view>
   </view>
   <view class="item item2">
@@ -30,7 +30,7 @@
       <view class="title_ps">上传您的身份证国徽面</view>
     </view>
     <view class="itemCont">
-      <image class="IDimage" bindtap="takeBack" src="../../images/idBack.png" mode="aspectFill"></image>
+      <image class="IDimage" bindtap="takeBack" src="{{IDBlack}}" mode="aspectFill"></image>
     </view>
   </view>
 </view>

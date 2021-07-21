@@ -85,7 +85,18 @@
 
       <view class="item">
         <view class="title">单位</view>
-        <view class="cont">请选择单位</view>
+        <view class="cont pick">
+          <picker wx:if="{{!unitList[unitindex]}}" bindchange="bindPickerUnitChange" value="{{unitindex}}" range="{{unitList}}">
+            <view class="picker">
+              请选择单位
+            </view>
+          </picker>
+          <picker wx:else bindchange="bindPickerUnitChange" value="{{unitindex}}" range="{{unitList}}">
+            <view class="picker font">
+              {{unitList[unitindex]}}
+            </view>
+          </picker>
+        </view>
         <image class="icon" src="../../images/choiceIcon.png" mode="aspectFill"></image>
       </view>
 
@@ -164,7 +175,18 @@
 
       <view class="item">
         <view class="title">单位</view>
-        <view class="cont">请选择单位</view>
+        <view class="cont pick">
+          <picker wx:if="{{!unitList[unitindex]}}" bindchange="bindPickerUnitChange" value="{{unitindex}}" range="{{unitList}}">
+            <view class="picker">
+              请选择单位
+            </view>
+          </picker>
+          <picker wx:else bindchange="bindPickerUnitChange" value="{{unitindex}}" range="{{unitList}}">
+            <view class="picker font">
+              {{unitList[unitindex]}}
+            </view>
+          </picker>
+        </view>
         <image class="icon" src="../../images/choiceIcon.png" mode="aspectFill"></image>
       </view>
     </view>
@@ -173,8 +195,19 @@
   <view class="page mt">
     <view class="container">
       <view class="item">
-        <view class="title">收货地址</view>
-        <view class="cont">请选择收货地址</view>
+        <view class="title">收获地址</view>
+        <view class="cont pick">
+          <picker wx:if="{{!showAddress}}" bindchange="bindRegionChange" mode="region" custom-item="{{customItem}}" value="{{region}}">
+            <view class="picker">
+              请选择收获地址
+            </view>
+          </picker>
+          <picker wx:else mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker font">
+              {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+            </view>
+          </picker>
+        </view>
         <image class="icon" src="../../images/choiceIcon.png" mode="aspectFill"></image>
       </view>
       <view class="item">

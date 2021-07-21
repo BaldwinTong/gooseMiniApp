@@ -7,7 +7,9 @@ Page({
    */
   data: {
     sendMess:false,
-    time:60
+    time:60,
+    IDFont:'../../images/idFront.png',
+    IDBlack:'../../images/idBack.png',
   },
 
   /**
@@ -71,23 +73,40 @@ Page({
   },
 
   takeFront(){
-    this.camera()
-  },
-  
-  takeBack(){
-    this.camera()
-  },
-
-  camera(){
+    let that = this;
+    let { IDFont } = this.data
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success (res) {
-        console.log(res);
+        // tempFilePath可以作为img标签的src属性显示图片
+        IDFont = res.tempFilePaths[0];
+        that.setData({
+          IDFont
+        })
+      }
+    })
+    
+  },
+  
+  takeBack(){
+    let that = this;
+    let { IDBlack } = this.data
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success (res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        IDBlack = res.tempFilePaths[0];
+        that.setData({
+          IDBlack
+        })
       }
     })
   },
+  
 
   getCode(){
     let that = this;
@@ -96,7 +115,6 @@ Page({
       sendMess:true
     })
 
-    // console.log(countDown(time));
    let interval =  setInterval(()=>{
       time = countDown(time)
       that.setData({

@@ -10,7 +10,11 @@ Page({
     saleIndex: 0,
     categoryArray: ['鸭苗', '苹果', '荔枝', '鸡苗'],
     placeOrigin:['江门','佛山','珠海','揭阳','湛江'],
-    imageList:[]
+    unitList:['KG','M','个','只','批'],
+    imageList:[],
+    region: ['广东省', '广州市', '海珠区'],
+    customItem: '全部',
+    showAddress:false
   },
 
   /**
@@ -112,6 +116,22 @@ Page({
     })
   },
 
+  //单位选择
+  bindPickerUnitChange: function (e) {
+    console.log(e.detail.value);
+    this.setData({
+      unitindex: e.detail.value
+    })
+  },
+
+  //地址选择器
+  bindRegionChange: function (e) {
+    this.setData({
+      showAddress:true,
+      region: e.detail.value
+    })
+  },
+
 
 
   //图片上传
@@ -142,6 +162,7 @@ Page({
     this.setData({
       imageList
     })
+  },
 
-  }
+  
 })
